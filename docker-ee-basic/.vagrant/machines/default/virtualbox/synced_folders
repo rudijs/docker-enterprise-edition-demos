@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant_data":{"guestpath":"/vagrant_data","hostpath":"/home/rudi/projects/docker-enterprise-edition-demos/docker-ee-basic/data","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/rudi/projects/docker-enterprise-edition-demos/docker-ee-basic","disabled":false,"__vagrantfile":true}}}
