@@ -2,12 +2,17 @@
 
 1. `vagrant up`
 2. `vagrant ssh`
-3. If this is a new VM update, upgrade and reboot: `apt-get update && apt-get dist-upgrade -yy && exit`, `vagrant reload`, `vagrant ssh`
+3. If this is a new VM update, upgrade and reboot:
+  - `sudo apt-get update && sudo apt-get dist-upgrade -yy && exit`
+  - `vagrant reload`
+  - `vagrant ssh`
 3. Export your Docker EE URL, example: `export DOCKER_EE_URL=<https://storebits.docker.com/ee/ubuntu/sub-xxxxx-xxxxx-xxxxx-xxxx-xxxxx-xxx>`
 4. `sh /vagrant_data/install_docker.sh`
 5. Reboot (sanity check that all is good)
-6. `exit`, `vagrant reload`, `vagrant ssh`
-6. Install Docker UCP (note the version, this will require upgrading over time)
+  - `exit`
+  - `vagrant reload`
+  - `vagrant ssh`
+7. Install Docker UCP (note the version, this will require upgrading over time)
 
 *Note*: The install will prompt you for an Admin name and Admin Password.
 
