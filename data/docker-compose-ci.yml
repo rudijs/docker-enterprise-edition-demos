@@ -4,7 +4,8 @@ services:
   jenkins:
     # image: jenkins
     # image: jenkins-docker
-    image: 192.168.88.10:5000/jenkins-docker:1.0.0
+    # image: 192.168.88.10:5000/jenkins-docker:1.0.0
+    image: local.dtr/viseo/jenkins-docker
     deploy:
       replicas: 1
       restart_policy:
@@ -13,10 +14,10 @@ services:
       - "8080:8080"
       - "50000:50000"
     networks:
-      - webnet
+      - cinet
     volumes:
       - /vagrant/data/jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
 
 networks:
-  webnet:
+  cinet:
