@@ -9,11 +9,11 @@
 7. `cd /vagrant/data/`
 8. `docker stack deploy --compose-file docker-compose-ci.yml jenkins`
 
+<!--
 ## Deploy a custom/specific image to a service
 
 1. `docker service update --image 192.168.88.10:5000/demo-app:1.0.0 demo_web`
 
-<!--
 ## Deploy Service Manually
 
 1. `docker stack deploy --compose-file docker-compose.yml demo`

@@ -29,7 +29,7 @@ Setup will take a few minutes, once the command line prompt returns you can chec
 
 You should see *Installed DTRs: 192.168.88.10*
 
-Open the DTR admin here: [https://192.168.88.10] then login as user *admin*
+Open the DTR admin here: [https://192.168.88.10](https://192.168.88.10) then login as user *admin*
 
 ## Organization and Repository Setup 
 
