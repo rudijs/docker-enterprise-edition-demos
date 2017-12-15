@@ -6,8 +6,9 @@
   - `sudo apt-get update && sudo apt-get dist-upgrade -yy && exit`
   - `vagrant reload`
   - `vagrant ssh`
-3. Export your Docker EE URL, example: `export DOCKER_EE_URL=<https://storebits.docker.com/ee/ubuntu/sub-xxxxx-xxxxx-xxxxx-xxxx-xxxxx-xxx>`
-4. `sh /vagrant_data/install_docker.sh`
+3. Export your Docker EE URL, example:
+  - `export DOCKER_EE_URL=<https://storebits.docker.com/ee/ubuntu/sub-xxxxx-xxxxx-xxxxx-xxxx-xxxxx-xxx>`
+4. `sh /vagrant/install_docker.sh`
 5. Reboot (sanity check that all is good)
   - `exit`
   - `vagrant reload`

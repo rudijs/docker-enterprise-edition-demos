@@ -46,6 +46,12 @@ In the DTR admin UI:
 3. Add the entry:
 4. `192.168.88.10 local.dtr`
 
+## Domains and Proxies config
+
+1. Open [https://192.168.88.10/admin/settings/general](https://192.168.88.10/admin/settings/general)
+2. *Domains & Proxies* > *Load Balancer/Public Address* > **local.dtr**
+3. *Save*
+
 ## Commandline access setup
 
 1. Download the DTR CA certificate

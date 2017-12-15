@@ -7,7 +7,7 @@
 5. user/password is *jenkins/password*
 6. `docker push local.dtr/viseo/jenkins-docker`
 7. `cd /vagrant/data/`
-8. `docker stack deploy --compose-file docker-compose-ci.yml jenkins`
+8. `docker stack deploy --compose-file docker-compose-ci.yml ci`
 
 <!--
 ## Deploy a custom/specific image to a service
