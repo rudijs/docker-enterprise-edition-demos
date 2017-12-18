@@ -18,6 +18,10 @@ services:
     volumes:
       - /vagrant/data/jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
+    logging:
+      driver: syslog
+      options:
+        syslog-address: "tcp://127.0.0.1:601"
 
 networks:
   cinet:

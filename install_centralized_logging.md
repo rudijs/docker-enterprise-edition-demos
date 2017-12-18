@@ -1,0 +1,30 @@
+# Install Centralized Logging
+
+Send container logs to scalyr.com.
+
+Sign up for a 30 day trial at scalyr.com if you don't have an account there already.
+
+1. As per the setup docs at scalyr, create a configuration file snippet to hold your api key. In this example, we will create /tmp/api_key.json:
+
+Example: 
+
+```
+{ 
+  api_key: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}
+```
+
+2. `docker pull scalyr/scalyr-docker-agent`
+3. Run the scalyr agent
+
+```
+docker run -d --name scalyr-docker-agent \ 
+-v /tmp/api_key.json:/etc/scalyr-agent-2/agent.d/api_key.json \
+-v /var/run/docker.sock:/var/scalyr/docker.sock \
+-p 601:601 \
+scalyr/scalyr-docker-agent
+```
+
+Simple test container:
+
+- `docker run  --log-driver=syslog --log-opt syslog-address=tcp://127.0.0.1:601 -d ubuntu /bin/sh -c 'while true; do echo Hello, World!; sleep 1; done'`

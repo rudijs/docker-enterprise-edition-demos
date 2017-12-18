@@ -29,6 +29,14 @@ services:
       - "3000:3000"
     networks:
       - webnet
+      # - logging_scalyr
+    logging:
+      driver: syslog
+      options:
+        syslog-address: "tcp://127.0.0.1:601"
 
 networks:
   webnet:
+  # logging_scalyr:
+    # external:
+      # name: logging_scalyr

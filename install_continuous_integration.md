@@ -6,7 +6,7 @@
 4. `docker login local.dtr`
 5. user/password is *jenkins/password*
 6. `docker push local.dtr/viseo/jenkins-docker`
-7. `cd /vagrant/data/`
+7. `cd /vagrant`
 8. `docker stack deploy --compose-file docker-compose-ci.yml ci`
 
 <!--
