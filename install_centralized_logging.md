@@ -4,7 +4,9 @@ Send container logs to scalyr.com.
 
 Sign up for a 30 day trial at scalyr.com if you don't have an account there already.
 
-1. As per the setup docs at scalyr, create a configuration file snippet to hold your api key. In this example, we will create /tmp/api_key.json:
+1. As per the setup docs at scalyr, create a configuration file snippet to hold your api key. 
+
+In this example, create /home/ubuntu/scalyr_api_key.json and chmod it to 600 (read only)
 
 Example: 
 
@@ -18,10 +20,11 @@ Example:
 3. Run the scalyr agent
 
 ```
-docker run -d --name scalyr-docker-agent \ 
--v /tmp/api_key.json:/etc/scalyr-agent-2/agent.d/api_key.json \
+docker run -d --name scalyr-docker-agent \
+-v /home/ubuntu/scalyr_api_key.json:/etc/scalyr-agent-2/agent.d/api_key.json \
 -v /var/run/docker.sock:/var/scalyr/docker.sock \
 -p 601:601 \
+--restart always \
 scalyr/scalyr-docker-agent
 ```
 

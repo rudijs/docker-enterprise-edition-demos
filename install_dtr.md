@@ -37,7 +37,12 @@ In the DTR admin UI:
 
 1. Click *Organizations* > *New Organization* > *Organization Name* > **viseo** > *Save*
 2. Click *Organizations* > *viseo* >  *Add user* > *New* > Username **jenkins** > Password **password** > *Save*
-3. Click *Organizations* > *viseo* > *Repositories* > *Add repository* > *Repository Name* > **docker-demo-web-app** > *Save*
+3. Click *Organizations* > *viseo* > *Repositories* > *Add repository* > *Repository Name* > **jenkins-docker** > *Save*
+4. Click *Organizations* > *viseo* > *Repositories* > *Add repository* > *Repository Name* > **demo-web-app** > *Save*
+6. Click *Organizations* > *viseo* > *Teams +* > *Team Name* > **dev** > *Save*
+7. Click *Organizations* > *viseo* > *Teams* > *dev* > *Add User* > *Existing* > **jenkins**
+8. Click *Organizations* > *viseo* > *Teams* > *dev* > *Repositories* > *Existing* > **jenkins-docker** (read/write) > *Save*
+9. Click *Organizations* > *viseo* > *Teams* > *dev* > *Repositories* > *Existing* > **demo-web-app** (read/write) > *Save*
 
 ## Local DNS resolution
 

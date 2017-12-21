@@ -23,5 +23,21 @@ services:
       options:
         syslog-address: "tcp://127.0.0.1:601"
 
+  sonarqube:
+    image: sonarqube:lts-alpine
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "9000:9000"
+      - "9092:9092"
+    networks: 
+      - cinet
+    # logging:
+      # driver: syslog
+      # options:
+        # syslog-address: "tcp://127.0.0.1:601"
+
 networks:
   cinet:
